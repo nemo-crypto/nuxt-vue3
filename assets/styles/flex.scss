@@ -1,0 +1,71 @@
+.flex {
+	display: flex;
+}
+
+.flex-wide {
+	width: 100%;
+}
+
+/** Gaps */
+$gaps: (2, 3, 4, 6, 8, 10, 12, 14, 16, 20, 24, 32, 40, 48);
+
+@each $gap in $gaps {
+	.gap--#{$gap} {
+		gap: #{$gap}px;
+	}
+}
+
+/** Alignments */
+$alignments: (
+	center: "center",
+	between: "space-between",
+	around: "space-around",
+	evenly: "space-evenly",
+	start: "flex-start",
+	end: "flex-end",
+);
+
+@each $align, $value in $alignments {
+	.justify-#{$align} {
+		justify-content: #{$value};
+	}
+
+	.items-#{$align} {
+		align-items: #{$value};
+	}
+
+	.justify-items-#{$align} {
+		justify-items: #{$value};
+	}
+
+	.content-#{$align} {
+		align-content: #{$value};
+	}
+}
+
+/** Wrap */
+$wraps: (
+	nowrap: "nowrap",
+	wrap: "wrap",
+	wrapReverse: "wrap-reverse",
+);
+
+@each $wrap, $value in $wraps {
+	.wrap-#{$wrap} {
+		flex-wrap: #{$value};
+	}
+}
+
+/** Direction */
+$directions: (
+	row: "row",
+	column: "column",
+	rowReversed: "row-reverse",
+	columnReversed: "column-reverse",
+);
+
+@each $direction, $value in $directions {
+	.flex-direction-#{$direction} {
+		flex-direction: #{$value};
+	}
+}

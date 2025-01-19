@@ -1,0 +1,49 @@
+{
+	"name": "nubit-explorer",
+	"version": "1.9.0",
+	"packageManager": "pnpm@8.7.4",
+	"homepage": "https://www.explorer.nubit.org/",
+	"license": "MIT",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "cross-env PORT=9090 nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"cross-env": "^7.0.3",
+		"nuxt": "3.9.1",
+		"nuxt-og-image": "2.0.28",
+		"nuxt-simple-sitemap": "^4.2.0",
+		"sass": "1.66.1",
+		"sass-loader": "13.3.2",
+		"unenv": "^1.9.0"
+	},
+	"dependencies": {
+		"@codemirror/lang-json": "^6.0.1",
+		"@keplr-wallet/cosmos": "^0.12.70",
+		"@openzeppelin/merkle-tree": "^1.0.6",
+		"@pinia/nuxt": "0.4.11",
+		"@vueuse/core": "^10.7.0",
+		"animate.css": "^4.1.1",
+		"buffer": "^6.0.3",
+		"codemirror": "^6.0.1",
+		"crypto-js": "^4.2.0",
+		"d3": "^7.8.5",
+		"d3-hierarchy": "^3.1.2",
+		"focus-trap": "7.5.2",
+		"hover.css": "^2.3.2",
+		"js-sha256": "^0.11.0",
+		"lean-qr": "^2.3.2",
+		"long": "^5.2.3",
+		"luxon": "3.4.3",
+		"nuxt-site-config": "^2.1.2",
+		"pinia": "2.1.6",
+		"protobufjs": "^7.2.6",
+		"qrcode": "^1.5.3",
+		"uuid": "9.0.1",
+		"vite-plugin-node-polyfills": "^0.21.0"
+	}
+}

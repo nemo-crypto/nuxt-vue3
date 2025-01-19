@@ -1,0 +1,143 @@
+/** Font Sizes */
+$sizes: (
+	8,
+	10,
+	11,
+	12,
+	13,
+	14,
+	15,
+	16,
+	18,
+	20,
+	24,
+	26,
+	32,
+	36,
+	38,
+	40
+);
+
+@each $size in $sizes {
+	.fz--#{$size} {
+		font-size: #{$size}px;
+	}
+}
+
+/* Font Weight */
+$weights: (
+	400,
+	500,
+	600,
+	700
+);
+
+@each $weight in $weights {
+	.fw--#{$weight} {
+		font-weight: #{$weight};
+	}
+}
+
+/* Line Height (%) */
+$heights: (
+	100: 1,
+	110: 1.1,
+	120: 1.2,
+	130: 1.3,
+	140: 1.4,
+	150: 1.5,
+	160: 1.6,
+	180: 1.8,
+);
+
+@each $height, $value in $heights {
+	.lh--#{$height} {
+		line-height: #{$value};
+	}
+}
+
+/* Text Align */
+$alignments: (
+	center: "center",
+	left: "left",
+	right: "right",
+);
+
+@each $align, $value in $alignments {
+	.ta--#{$align} {
+		text-align: #{$value};
+	}
+}
+
+/* Colors */
+$textColors: (
+	"primary": "--txt-primary",
+	"body": "--txt-body",
+	"secondary": "--txt-secondary",
+	"yellowNew": "--yellowNew",
+	"redNew": "--redNew",
+	"tertiary": "--txt-tertiary",
+	"support": "--txt-support",
+	"black": "--txt-black",
+	"white": "--txt-white",
+	"blue": "--blue",
+	"orange": "--orange",
+	"light-orange": "--light-orange",
+	"green": "--green",
+	"greenNew": "--greenNew",
+	"brand": "--brand",
+	"neutral-green": "--neutral-green",
+	"red": "--red",
+	"yellow": "--yellow",
+	"purple": "--purple",
+);
+
+@each $key, $value in $textColors {
+	.color--#{$key} {
+		color: var(#{$value});
+	}
+}
+
+@each $key, $value in $textColors {
+	.fill--#{$key} {
+		fill: var(#{$value});
+	}
+}
+
+/* Other */
+.no-wrap {
+	white-space: nowrap;
+}
+
+.mono {
+	font-family: "Space Grotesk";
+}
+
+.tabular {
+	font-variant: tabular-nums;
+}
+
+.selectable {
+	user-select: text;
+}
+
+// font-family ;
+.robot_font {
+	font-family: "Space Grotesk";
+}
+
+.furore_font {
+	font-family: "Space Grotesk";
+}
+
+.ds_font {
+	font-family: "Space Grotesk";
+}
+
+.openSans_font {
+	font-family: "Space Grotesk";
+}
+
+.rubik_font {
+	font-family: "Space Grotesk";
+}

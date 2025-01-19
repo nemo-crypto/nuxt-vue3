@@ -1,0 +1,332 @@
+$grayscale: (
+	03: 0.03,
+	05: 0.05,
+	08: 0.08,
+	10: 0.1,
+	15: 0.15,
+	20: 0.2,
+	30: 0.3,
+	40: 0.4,
+	50: 0.5,
+);
+
+:root {
+	--base-width: 1320px;
+
+	/* Main */
+	--app-background: rgb(23, 25, 27);
+	--card-background: rgb(32, 34, 37);
+	--tooltip-background: rgba(0, 0, 0, 90%);
+	--outline-background: #2b2d30;
+	--outline-background-hover: #1e2022;
+	--outline-gradient: linear-gradient(var(--op-15), var(--op-5));
+
+	/* Text */
+	--txt-primary: rgba(255, 255, 255, 1);
+	--txt-body: rgba(255, 255, 255, 75%);
+	--txt-secondary: rgba(255, 255, 255, 65%);
+	--txt-tertiary: rgba(182, 182, 182, 1);
+	--txt-support: rgba(255, 255, 255, 15%);
+	--txt-black: rgba(0, 0, 0, 95%);
+	--txt-white: rgba(255, 255, 255, 95%);
+
+	/* General */
+	--brand: #924dff;
+	--blue: #076acd;
+	--red: rgba(235, 87, 87, 1);
+	--redNew: #F33928;
+	--orange: #ff5a17;
+	--light-orange: #ff8351;
+	--yellow: #ffd400;
+	--yellowNew: #FFFFFF;
+	--green: #0ade71;
+	--greenNew: #00B507;
+	--neutral-green: #33a853;
+	--purple: #5856de;
+
+	/* Grayscale */
+	@each $gray, $value in $grayscale {
+		--op-#{$gray}: rgba(255, 255, 255, #{$value});
+	}
+
+	/** Button */
+	--btn-white-bg: rgba(255, 255, 255, 90%);
+	--btn-white-bg-hover: rgba(255, 255, 255, 75%);
+	--btn-white-bg-active: rgba(255, 255, 255, 90%);
+	--btn-red-bg: rgba(235, 87, 87, 100%);
+	--btn-red-bg-hover: rgba(235, 87, 87, 75%);
+	--btn-red-bg-active: rgba(235, 87, 87, 90%);
+	--btn-secondary-bg: rgba(255, 255, 255, 8%);
+	--btn-secondary-bg-hover: rgba(255, 255, 255, 10%);
+	--btn-secondary-bg-active: rgba(255, 255, 255, 7%);
+
+	/** Other */
+	--network-widget-background: rgba(0, 0, 0, 10%);
+	--network-widget-separator: #2f3133;
+	--network-widget-indicator: #fff;
+	--feed-background: rgba(0, 0, 0, 8%);
+	--notification-background: rgba(0, 0, 0, 95%);
+	--block-progress-background: rgba(0, 0, 0, 20%);
+	--block-progress-fill-background: #33a853;
+	--logo-name: var(--txt-primary);
+	--bar-fill: rgb(243, 147, 45);
+	--validator-active: #85F891;
+	--validator-inactive: #65C7F8;
+	--validator-jailed: #F8774A;
+	--supply: #FFD43B;
+	--staking: #F7931A;
+
+}
+
+[theme="dimmed"] {
+	--base-width: 1320px;
+
+	/* Main */
+	--app-background: rgb(27, 29, 33);
+	--card-background: rgb(35, 37, 43);
+	--tooltip-background: rgba(0, 0, 0, 90%);
+	--outline-background: #2b2d30;
+	--outline-background-hover: #1e2022;
+	--outline-gradient: linear-gradient(var(--op-15), var(--op-5));
+
+	/* Text */
+	--txt-primary: rgba(255, 255, 255, 90%);
+	--txt-body: rgba(255, 255, 255, 75%);
+	--txt-secondary: rgba(255, 255, 255, 65%);
+	--txt-tertiary: rgba(182, 182, 182, 1);
+	--txt-support: rgba(255, 255, 255, 15%);
+	--txt-black: rgba(0, 0, 0, 95%);
+	--txt-white: rgba(255, 255, 255, 95%);
+
+	/* General */
+	--brand: #924dff;
+	--blue: #0b84fe;
+	--red: #eb5757;
+	--orange: #ff5a17;
+	--light-orange: #ff8351;
+	--yellow: #ffd400;
+	--green: #0ade71;
+	--neutral-green: #33a853;
+	--purple: #5856de;
+
+	/* Grayscale */
+	@each $gray, $value in $grayscale {
+		--op-#{$gray}: rgba(255, 255, 255, #{$value});
+	}
+
+	/** Button */
+	--btn-white-bg: rgba(255, 255, 255, 90%);
+	--btn-white-bg-hover: rgba(255, 255, 255, 75%);
+	--btn-white-bg-active: rgba(255, 255, 255, 90%);
+	--btn-secondary-bg: rgba(255, 255, 255, 5%);
+	--btn-secondary-bg-hover: rgba(255, 255, 255, 8%);
+	--btn-secondary-bg-active: rgba(255, 255, 255, 5%);
+
+	/** Other */
+	--network-widget-background: rgba(0, 0, 0, 10%);
+	--network-widget-separator: #2f3133;
+	--network-widget-indicator: #fff;
+	--feed-background: rgba(0, 0, 0, 8%);
+	--notification-background: rgba(0, 0, 0, 95%);
+	--block-progress-background: rgba(0, 0, 0, 20%);
+	--block-progress-fill-background: #33a853;
+	--logo-name: var(--txt-primary);
+	--bar-fill: rgb(243, 147, 45);
+}
+
+[theme="light"] {
+	--base-width: 1320px;
+
+	/* Main */
+	--app-background: rgb(235, 235, 235);
+	--card-background: rgb(255, 255, 255);
+	--tooltip-background: rgba(255, 255, 255, 100%);
+	--outline-background: #e5e5e5;
+	--outline-background-hover: #d7d7d7;
+	--outline-gradient: linear-gradient(var(--op-10), var(--op-20));
+
+	/* Text */
+	--txt-primary: rgba(0, 0, 0, 90%);
+	--txt-body: rgba(0, 0, 0, 75%);
+	--txt-secondary: rgba(0, 0, 0, 70%);
+	--txt-tertiary: rgba(0, 0, 0, 40%);
+	--txt-support: rgba(0, 0, 0, 20%);
+	--txt-black: rgba(0, 0, 0, 95%);
+	--txt-white: rgba(255, 255, 255, 95%);
+
+	/* General */
+	--brand: #924dff;
+	--blue: #0b84fe;
+	--red: #eb5757;
+	--orange: #ff5a17;
+	--light-orange: #ff8351;
+	--yellow: #e5c10b;
+	--green: #26c071;
+	--neutral-green: #33a853;
+	--purple: #5856de;
+
+	/* Grayscale */
+	@each $gray, $value in $grayscale {
+		--op-#{$gray}: rgba(0, 0, 0, #{$value});
+	}
+
+	/** Button */
+	--btn-white-bg: rgba(255, 255, 255, 90%);
+	--btn-white-bg-hover: rgba(255, 255, 255, 75%);
+	--btn-white-bg-active: rgba(255, 255, 255, 90%);
+	--btn-secondary-bg: rgba(0, 0, 0, 8%);
+	--btn-secondary-bg-hover: rgba(0, 0, 0, 12%);
+	--btn-secondary-bg-active: rgba(0, 0, 0, 8%);
+
+	/** Other */
+	--network-widget-background: rgba(0, 0, 0, 3%);
+	--network-widget-separator: #eaeaea;
+	--network-widget-indicator: #000;
+	--feed-background: rgba(0, 0, 0, 2%);
+	--notification-background: rgba(255, 255, 255, 95%);
+	--block-progress-background: rgba(0, 0, 0, 8%);
+	--block-progress-fill-background: #33a853;
+	--logo-name: var(--txt-primary);
+	--bar-fill: rgb(243, 147, 45);
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: local("Space Grotesk"), url(~/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf) format("truetype");
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:disabled {
+	cursor: default;
+}
+
+a {
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+button,
+[role="button"] {
+	cursor: pointer;
+}
+
+button {
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+input {
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+html {
+	overflow-x: hidden;
+	scrollbar-gutter: stable;
+	background: #020005;
+}
+
+body {
+	min-height: 100vh;
+	background-image: url(~/assets/image/bg.webp);
+	background-size: 100% auto;
+	background-repeat: repeat;
+	font-family: "Space Grotesk";
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	user-select: none;
+}
+
+*::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0);
+	border-radius: 50px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+*::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+
+.copyable {
+	cursor: copy;
+}
+
+.dot {
+	width: 3px;
+	height: 3px;
+
+	border-radius: 50px;
+	background: var(--txt-tertiary);
+}
+
+.popup-enter-active,
+.popup-leave-active {
+	transition: all 0.1s ease;
+}
+
+.popup-enter-from,
+.popup-leave-to {
+	opacity: 0;
+	transform: scale(0.5);
+}
+
+.fastpopup-enter-active,
+.fastpopup-leave-active {
+	transition: all 0.1s ease;
+}
+
+.fastpopup-enter-from,
+.fastpopup-leave-to {
+	opacity: 0;
+	transform: scale(0.97);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+	transition: all 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.fastfade-enter-active,
+.fastfade-leave-active {
+	transition: all 0.1s ease;
+}
+
+.fastfade-enter-from,
+.fastfade-leave-to {
+	opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+	transition: ease-in 0.05s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slide-enter-from,
+.slide-leave-to {
+	transform: translateY(-25px);
+}

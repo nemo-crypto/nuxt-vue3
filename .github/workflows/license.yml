@@ -1,0 +1,45 @@
+name: Check Licenses
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pnpm-lock.yaml'
+  pull_request:
+    paths:
+      - 'pnpm-lock.yaml'
+jobs:
+  licenses:
+    name: Check licenses
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+      - uses: daynin/nodejs-license-checker@v0.2.0
+        with:
+          exclude-private-packages: true
+          allow-only:  |
+            MIT
+            Apache-1.0
+            Apache-1.1
+            Apache-2.0
+            BSD-2-Clause-FreeBSD
+            BSD-2-Clause-NetBSD
+            BSD-2-Clause
+            BSD-3-Clause-Attribution
+            BSD-3-Clause-Clear
+            BSD-3-Clause-LBNL
+            BSD-3-Clause
+            BSD-4-Clause
+            BSD-4-Clause-UC
+            BSD-Protection
+            ISC
+            LGPL-2.0
+            LGPL-2.1
+            LGPL-3.0
+            LGPLLR
+            MPL-1.0
+            MPL-1.1
+            MPL-2.0
+            Unlicense

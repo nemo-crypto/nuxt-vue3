@@ -1,15 +1,7 @@
-## Install Dependencies
-```bash
-yarn
+### Local Setup
+
 ```
-
-## Run
-
-```bash
-yarn start
-```
-
-```bash
-pnpm  build
-pnpm  start
+pnpm i
+pnpm dev
+pnpm build
 ```
