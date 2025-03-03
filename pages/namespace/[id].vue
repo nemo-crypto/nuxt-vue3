@@ -17,10 +17,11 @@ const route = useRoute()
 const router = useRouter()
 
 const namespace = ref()
+	
 const { data: rawNamespace } = await fetchNamespaceByID(route.params.id)
 
 if (!rawNamespace.value) {
-	router.push("/")
+	Ïrouter.push("/")
 } else {
 	namespace.value = rawNamespace.value[0]
 	cacheStore.current.namespace = namespace.value
